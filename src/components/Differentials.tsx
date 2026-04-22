@@ -22,7 +22,7 @@ const items = [
 
 export function Differentials() {
   return (
-    <section id="diferenciais" className="relative py-20 sm:py-28">
+    <section id="diferenciais" className="relative py-16 sm:py-20 lg:py-28">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">

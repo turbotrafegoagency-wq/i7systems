@@ -55,7 +55,7 @@ export function Testimonials() {
   return (
     <section
       id="depoimentos"
-      className="relative overflow-hidden py-20 sm:py-28"
+      className="relative overflow-hidden py-16 sm:py-20 lg:py-28"
     >
       <div className="absolute inset-0 grid-bg opacity-30" />
       <div className="absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
