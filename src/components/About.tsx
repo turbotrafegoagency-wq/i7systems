@@ -4,7 +4,7 @@ import aboutImg from "@/assets/about-workshop.jpg";
 
 export function About() {
   return (
-    <section id="sobre" className="relative py-20 sm:py-28">
+    <section id="sobre" className="relative py-16 sm:py-20 lg:py-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div className="relative order-2 lg:order-1">
