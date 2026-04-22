@@ -1,5 +1,6 @@
-import { Zap, Instagram, MessageCircle, MapPin } from "lucide-react";
+import { Instagram, MessageCircle, MapPin } from "lucide-react";
 import { WHATSAPP_LINK, INSTAGRAM_URL, ADDRESS, PHONE_DISPLAY } from "@/lib/constants";
+import logo from "@/assets/logo.png";
 
 const links = [
   { href: "#diferenciais", label: "Diferenciais" },
@@ -11,20 +12,19 @@ const links = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-primary/20 bg-background py-14">
+    <footer className="border-t border-primary/20 bg-background py-12 sm:py-14">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <a
               href="#top"
-              className="flex items-center gap-2 font-display text-xl font-black uppercase"
+              className="flex items-center gap-2.5 font-display text-xl font-black uppercase"
             >
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-primary glow">
-                <Zap
-                  className="h-5 w-5 text-primary-foreground"
-                  fill="currentColor"
-                />
-              </span>
+              <img
+                src={logo}
+                alt="i7 Systems"
+                className="h-11 w-11 object-contain drop-shadow-[0_0_12px_oklch(0.7_0.2_235/0.7)]"
+              />
               <span className="text-gradient-primary">i7 Systems</span>
             </a>
             <p className="mt-4 text-sm text-muted-foreground">
