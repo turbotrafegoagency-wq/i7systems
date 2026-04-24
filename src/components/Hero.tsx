@@ -1,6 +1,6 @@
 import { ArrowRight, ShieldCheck, Star, Zap } from "lucide-react";
 import { WHATSAPP_LINK } from "@/lib/constants";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.jpeg";
 
 export function Hero() {
   return (
