@@ -6,6 +6,8 @@ import logo from "@/assets/logo.png";
 const links = [
   { href: "#diferenciais", label: "Diferenciais" },
   { href: "#servicos", label: "Serviços" },
+  { href: "#antes-depois", label: "Antes e depois" },
+  { href: "#nossa-loja", label: "Nossa loja" },
   { href: "#sobre", label: "Sobre nós" },
   { href: "#depoimentos", label: "Depoimentos" },
   { href: "#contato", label: "Endereço" },
