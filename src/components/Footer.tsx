@@ -1,6 +1,6 @@
 import { Instagram, MessageCircle, MapPin } from "lucide-react";
 import { WHATSAPP_LINK, INSTAGRAM_URL, ADDRESS, PHONE_DISPLAY } from "@/lib/constants";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.jpeg";
 
 const links = [
   { href: "#diferenciais", label: "Diferenciais" },
