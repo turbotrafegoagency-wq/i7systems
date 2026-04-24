@@ -103,7 +103,7 @@ export function Contact() {
           <div className="overflow-hidden rounded-2xl border border-primary/30 glow">
             <iframe
               title="Localização i7 Systems"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.847373!2d-46.6555!3d-23.5614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzQxLjAiUyA0NsKwMzknMjAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
+              src="https://www.google.com/maps?q=Rua%20Santa%20Cruz%20do%20Arari%20764%20Jd.%20Calif%C3%B3rnia%20Barueri%20SP&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: "500px", filter: "invert(0.92) hue-rotate(180deg) brightness(0.95) contrast(0.85)" }}
