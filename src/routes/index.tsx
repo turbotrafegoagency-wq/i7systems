@@ -44,9 +44,9 @@ function Index() {
       <Header />
       <main>
         <Hero />
+        <BeforeAfter />
         <Differentials />
         <Services />
-        <BeforeAfter />
         <StoreGallery />
         <About />
         <Testimonials />
