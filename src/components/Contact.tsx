@@ -1,10 +1,11 @@
-import { MapPin, Phone, Clock, Instagram, ArrowRight } from "lucide-react";
+import { MapPin, Phone, Clock, Instagram, Mail, ArrowRight } from "lucide-react";
 import {
   WHATSAPP_LINK,
   PHONE_DISPLAY,
   INSTAGRAM_URL,
   ADDRESS,
   HOURS,
+  EMAIL,
 } from "@/lib/constants";
 
 export function Contact() {
@@ -71,6 +72,21 @@ export function Contact() {
                 <p className="mt-1 text-foreground">{HOURS}</p>
               </div>
             </div>
+
+            <a
+              href={`mailto:${EMAIL}`}
+              className="flex items-start gap-4 rounded-2xl border border-primary/30 bg-card/60 p-5 transition-all hover:border-primary hover:glow"
+            >
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground glow">
+                <Mail className="h-6 w-6" />
+              </div>
+              <div>
+                <p className="text-xs font-bold uppercase tracking-widest text-primary">
+                  E-mail
+                </p>
+                <p className="mt-1 break-all text-foreground">{EMAIL}</p>
+              </div>
+            </a>
 
             <a
               href={INSTAGRAM_URL}

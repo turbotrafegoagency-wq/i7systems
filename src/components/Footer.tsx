@@ -1,5 +1,5 @@
-import { Instagram, MessageCircle, MapPin } from "lucide-react";
-import { WHATSAPP_LINK, INSTAGRAM_URL, ADDRESS, PHONE_DISPLAY } from "@/lib/constants";
+import { Instagram, MessageCircle, MapPin, Mail } from "lucide-react";
+import { WHATSAPP_LINK, INSTAGRAM_URL, ADDRESS, PHONE_DISPLAY, EMAIL } from "@/lib/constants";
 import logo from "@/assets/logo.jpeg";
 
 const links = [
@@ -63,6 +63,13 @@ export function Footer() {
               Fale conosco
             </p>
             <p className="text-sm text-foreground">{PHONE_DISPLAY}</p>
+            <a
+              href={`mailto:${EMAIL}`}
+              className="mt-2 flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
+            >
+              <Mail className="h-4 w-4 text-primary" />
+              <span className="break-all">{EMAIL}</span>
+            </a>
             <div className="mt-5 flex gap-3">
               <a
                 href={INSTAGRAM_URL}
