@@ -1,5 +1,5 @@
-import { Instagram, MessageCircle, MapPin } from "lucide-react";
-import { WHATSAPP_LINK, INSTAGRAM_URL, ADDRESS, PHONE_DISPLAY } from "@/lib/constants";
+import { Instagram, MessageCircle, MapPin, Mail } from "lucide-react";
+import { WHATSAPP_LINK, INSTAGRAM_URL, ADDRESS, PHONE_DISPLAY, EMAIL } from "@/lib/constants";
 import logo from "@/assets/logo.jpeg";
 
 const links = [
