@@ -1,17 +1,33 @@
 import { ArrowRight } from "lucide-react";
 import { WHATSAPP_LINK } from "@/lib/constants";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import iphoneImg from "@/assets/before-after-iphone.png";
+import iphoneAntes1 from "@/assets/iphone-antes-1.jpg";
+import iphoneDepois1 from "@/assets/iphone-depois-1.jpg";
+import iphoneAntes2 from "@/assets/iphone-antes-2.jpg";
+import iphoneDepois2 from "@/assets/iphone-depois-2.jpg";
 import huaweiImg from "@/assets/before-after-huawei.png";
 import notebookImg from "@/assets/before-after-notebook.png";
 
-const repairs = [
+type Pair = { before: string; after: string; alt: string };
+
+type Repair = {
+  value: string;
+  label: string;
+  title: string;
+  pairs?: Pair[];
+  img?: string;
+  alt?: string;
+};
+
+const repairs: Repair[] = [
   {
     value: "iphone",
     label: "iPhone",
-    title: "Troca de tela com acabamento preciso",
-    img: iphoneImg,
-    alt: "Antes e depois de reparo em iPhone com tela quebrada",
+    title: "Troca de tela e tampa traseira com acabamento original",
+    pairs: [
+      { before: iphoneAntes1, after: iphoneDepois1, alt: "Troca de tampa traseira de iPhone" },
+      { before: iphoneAntes2, after: iphoneDepois2, alt: "Troca de tela de iPhone" },
+    ],
   },
   {
     value: "huawei",
@@ -28,6 +44,26 @@ const repairs = [
     alt: "Antes e depois de manutenção em notebook na assistência técnica",
   },
 ];
+
+function PairCard({ pair }: { pair: Pair }) {
+  return (
+    <div className="grid grid-cols-2 gap-2 sm:gap-3">
+      {(["before", "after"] as const).map((key) => (
+        <div key={key} className="relative overflow-hidden rounded-xl border border-primary/30 bg-black/40">
+          <span className="absolute left-2 top-2 z-10 rounded-full bg-background/80 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-primary backdrop-blur">
+            {key === "before" ? "Antes" : "Depois"}
+          </span>
+          <img
+            src={pair[key]}
+            alt={`${key === "before" ? "Antes" : "Depois"} — ${pair.alt}`}
+            loading="lazy"
+            className="aspect-[3/4] w-full object-contain"
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export function BeforeAfter() {
   return (
@@ -58,16 +94,24 @@ export function BeforeAfter() {
 
           {repairs.map((item) => (
             <TabsContent key={item.value} value={item.value} className="mt-6">
-              <div className="overflow-hidden rounded-2xl border border-primary/30 bg-card/60 glow">
-                <img
-                  src={item.img}
-                  alt={item.alt}
-                  width={900}
-                  height={700}
-                  loading="lazy"
-                  className="aspect-[4/3] w-full object-cover"
-                />
-                <div className="p-5 text-center">
+              <div className="overflow-hidden rounded-2xl border border-primary/30 bg-card/60 p-4 sm:p-6 glow">
+                {item.pairs ? (
+                  <div className="space-y-4 sm:space-y-6">
+                    {item.pairs.map((p, i) => (
+                      <PairCard key={i} pair={p} />
+                    ))}
+                  </div>
+                ) : (
+                  <img
+                    src={item.img}
+                    alt={item.alt}
+                    width={900}
+                    height={700}
+                    loading="lazy"
+                    className="aspect-[4/3] w-full rounded-xl object-cover"
+                  />
+                )}
+                <div className="p-2 pt-5 text-center sm:p-4 sm:pt-6">
                   <h3 className="font-display text-xl font-black uppercase text-gradient-primary">
                     {item.title}
                   </h3>
